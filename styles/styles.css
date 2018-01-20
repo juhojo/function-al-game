@@ -1,0 +1,195 @@
+* {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, p, span {
+  color: #fff;
+}
+
+input {
+}
+
+body {
+  background-color: #444;
+  font-family: Consolas, monospace;
+}
+
+/* Scrollbar */
+#commands::-webkit-scrollbar {
+  width: 20px;
+  height: 20px;
+}
+#commands::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+#commands::-webkit-scrollbar-thumb {
+  background: #222;
+  border: 1px solid #333;
+  border-radius: 0px;
+}
+#commands::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
+#commands::-webkit-scrollbar-thumb:active {
+  background: #333;
+}
+#commands::-webkit-scrollbar-track {
+  background: #111;
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-color: #333;
+  border-radius: 0px;
+}
+#commands::-webkit-scrollbar-track:active {
+  background: #202020;
+}
+#commands::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+.title {
+  display: block;
+  background: #222;
+  padding: 10px 20px;
+}
+
+.container {
+  width: 802px;
+  margin: 20px auto;
+}
+
+.content {
+  border: 1px solid #fff;
+}
+
+#commands_wrapper {
+  background: #111;
+}
+
+#topbar {
+  border-bottom: 1px solid #222;
+  text-align: right;
+}
+
+.icon {
+  display: inline-block;
+  height: 26px;
+  width: 26px;
+  margin: 4px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid;
+  border-color: #fff;
+  transition: border-color .1s;
+}
+
+.icon:hover {
+  border-color: #00f400;
+}
+
+.icon > span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 26px;
+  color: #fff;
+  transition: color .1s;
+  pointer-events: none;
+}
+
+.icon:hover > span {
+  color: #00f400;
+}
+
+.tooltip {
+  display: none;
+  border: 1px solid #fff;
+  position: fixed;
+  z-index: 2;
+  width: 200px;
+  background: indigo;
+  padding: 4px;
+  text-align: left;
+}
+
+.tooltip:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #fff;
+}
+
+#commands_wrapper {
+  float: right;
+  display: inline-block;
+}
+
+#commands_content {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  width: 400px;
+}
+
+#commands {
+  display: inline-block;
+  padding: 5px;
+  color: #00f400;
+  flex-grow: 1;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+#commands > p {
+  word-wrap: break-word;
+}
+
+#game {
+  display: inline-block;
+  background-color: #000;
+  height: 400px;
+  width: 400px;
+}
+
+#input_container {
+  border-top: 1px solid #222;
+}
+
+#input_container input {
+  border: none;
+  background: none;
+  width: 100%;
+  padding: 4px 8px;
+  color: #00f400;
+  font-family: Consolas, monospace;
+}
+
+#input_container input:focus {
+  outline: none;
+}
+
+.cell {
+  display: inline-block;
+}
+
+#about {
+  margin-top: 10px;
+}
+
+#about > p {
+  color: #00f400;
+}
+
+#about > ul {
+  margin-left: 20px;
+}
